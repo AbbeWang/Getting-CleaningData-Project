@@ -1,0 +1,18 @@
+{
+    "contents" : "#reading and extracting data sets\n\nfeatures = read.table(\"./UCI HAR Dataset/features.txt\")\nxtest = read.table(\"./UCI HAR Dataset/test/x_test.txt\",col.names = features$V2)\nxtrain = read.table(\"./UCI HAR Dataset/train/x_train.txt\",col.names = features$V2)\n\nmeans = agrep(\"mean()\", features$V2)\nstd = agrep(\"std()\", features$V2)\nfeatures = features[sort(c(means,std)),]\n\nxtest = xtest[,features$V1]\nxtrain = xtrain[,features$V1]\n\n\n#adding attributes\nytest = read.table(\"./UCI HAR Dataset/test/y_test.txt\")\nsubjecttest = read.table(\"./UCI HAR Dataset/test/subject_test.txt\")\n\nxtest$act_lable = ytest$V1\nxtest$subject = subjecttest$V1\n\nytrain = read.table(\"./UCI HAR Dataset/train/y_train.txt\")\nsubjecttrain = read.table(\"./UCI HAR Dataset/train/subject_train.txt\")\n\nxtrain$act_lable = ytrain$V1\nxtrain$subject = subjecttrain$V1\n\n\n#combing test sets and training sets\nwhole = rbind(xtest, xtrain)\n\n\n",
+    "created" : 1443077604842.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1899222796",
+    "id" : "4FEF7771",
+    "lastKnownWriteTime" : 1443087960,
+    "path" : "G:/Coursera/Getting and Cleaning Data/Project/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
