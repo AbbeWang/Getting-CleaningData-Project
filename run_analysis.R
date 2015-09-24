@@ -30,3 +30,16 @@ xtrain$subject = subjecttrain$V1
 whole = rbind(xtest, xtrain)
 
 
+# adding descriptive activity names
+whole$activity = activity_labels[whole$act_lable,2]
+
+
+#creating a new frame with the average of each variable for each activity and each subject
+library(reshape2)
+whole$subject = factor(whole$subject)
+#meltdata = melt(whole, measure.vars = c("activity","subject"))
+
+
+
+
+

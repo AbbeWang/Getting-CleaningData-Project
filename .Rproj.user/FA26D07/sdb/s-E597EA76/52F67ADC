@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1443089732667.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "52F67ADC",
+    "lastKnownWriteTime" : 9007628758679649,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "5zqz0aili3",
+        "caption" : "meltdata",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=meltdata&cache_key=5zqz0aili3",
+        "displayedObservations" : 20598,
+        "environment" : "",
+        "object" : "meltdata",
+        "totalObservations" : 20598,
+        "variables" : 69
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
