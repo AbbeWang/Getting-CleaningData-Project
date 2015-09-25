@@ -36,10 +36,18 @@ whole$activity = activity_labels[whole$act_lable,2]
 
 #creating a new frame with the average of each variable for each activity and each subject
 library(reshape2)
-whole$subject = factor(whole$subject)
-#meltdata = melt(whole, measure.vars = c("activity","subject"))
+meltdata = melt(whole, id = c("subject", "activity"), measure.vars = names(whole)[c(68,1:66)])
+
+meltdata$subject = factor(meltdata$subject)
+splitData = split(meltdata, meltdata$subject)
+for(i in as.numeric(levels(meltdata$subject))){
+  splitData[[i]] = dcast(splitData[[i]], activity~variable,mean)
+}
+
+tidyData = splitData[[1]]
+for(i in 2:30){
+  tidyData = rbind(tidyData, splitData[[i]])
+}
 
 
-
-
-
+# write tidyData to a .txt

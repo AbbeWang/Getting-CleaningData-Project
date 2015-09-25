@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1443144815346.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3B9F656D",
+    "lastKnownWriteTime" : 35596688957535,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "y4daan14x8",
+        "caption" : "tidyData",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=tidyData&cache_key=y4daan14x8",
+        "displayedObservations" : 180,
+        "environment" : "",
+        "object" : "tidyData",
+        "totalObservations" : 180,
+        "variables" : 68
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
