@@ -1,5 +1,4 @@
 #reading and extracting data sets
-
 features = read.table("./UCI HAR Dataset/features.txt")
 xtest = read.table("./UCI HAR Dataset/test/x_test.txt",col.names = features$V2)
 xtrain = read.table("./UCI HAR Dataset/train/x_train.txt",col.names = features$V2)
@@ -51,3 +50,4 @@ for(i in 2:30){
 
 
 # write tidyData to a .txt
+write.table(tidyData,"./tidyData.txt", row.names = FALSE)
